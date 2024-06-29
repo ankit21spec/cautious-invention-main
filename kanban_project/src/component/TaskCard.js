@@ -10,16 +10,18 @@ const TaskModal = ({
   initialDescription,
   initialComments,
 }) => {
-  const [title, setTitle] = useState(initialTitle || "");
-  const [description, setDescription] = useState(initialDescription || "");
-  const [comments, setComments] = useState(initialComments || []);
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [comments, setComments] = useState([]);
   const [newComment, setNewComment] = useState("");
 
   useEffect(() => {
-    setTitle(initialTitle || "");
-    setDescription(initialDescription || "");
-    setComments(initialComments || []);
-  }, [initialTitle, initialDescription, initialComments]);
+    if (isOpen) {
+      setTitle(initialTitle || "");
+      setDescription(initialDescription || "");
+      setComments(initialComments || []);
+    }
+  }, [isOpen, initialTitle, initialDescription, initialComments]);
 
   const handleSave = () => {
     onSave(title, description, comments);

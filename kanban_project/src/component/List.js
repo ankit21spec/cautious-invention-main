@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDrop } from "react-dnd";
 import Card from "./Card";
-import "./List.css";
+import "../styles/List.css";
 import TaskModal from "./TaskCard";
 
 const List = ({ list, addTask, moveCard, updateTask }) => {

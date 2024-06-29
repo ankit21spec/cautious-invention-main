@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Modal from "react-modal";
-import "./Card.css";
+import "../styles/Card.css";
 
 const TaskModal = ({
   isOpen,

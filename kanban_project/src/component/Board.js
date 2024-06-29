@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import List from "./List";
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
-import "./Board.css";
+import "../styles/Board.css";
 
 const Board = () => {
   const [lists, setLists] = useState([

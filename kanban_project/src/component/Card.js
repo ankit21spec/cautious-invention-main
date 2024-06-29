@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDrag } from "react-dnd";
-import "./Card.css";
+import "../styles/Card.css";
 import TaskModal from "./TaskCard";
 
 const Card = ({ task, index, moveCard, updateTask }) => {
